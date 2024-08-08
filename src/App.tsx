@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { RepoList } from './components/RepoList/RepoList';
+import { SearchBar } from './components/SearchBar/SearchBar';
+import { store } from './store/repo.store'
+import { Provider } from 'react-redux'
+import { RepoInfo } from './components/RepoInfo/RepoInfo';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className='container'>
+        <SearchBar />
+        <div className='info_frame'>
+          <RepoList/>
+          <RepoInfo />
+        </div>
+        <div className='footer'>
+          
+        </div>
+      </div>
+    </Provider>
   );
 }
 

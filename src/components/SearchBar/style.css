@@ -1,0 +1,27 @@
+.search_bar {
+  max-width: 100%;
+	height: 40px;
+	display: flex;
+	column-gap: 10px;
+	background-color: var(--light_blue);
+	padding: 10px;
+}
+
+.search_bar .input {
+	width: 912px;
+  margin-left: 20px;
+	border-radius: 4px;
+	background-color: var(--white);
+	resize: none;
+	font-size: 14px;
+}
+
+.search_bar .button {
+	width: 105px;
+	border-radius: 4px;
+	border: 0px solid transparent;
+	box-shadow: 0px 3px 1px -2px #00000033;
+	background-color: var(--blue);
+	color: white;
+	font-size: 14px;
+}
